@@ -5,6 +5,7 @@ function ItemEstoque({ task }) {
     const [isEditing, setIsEditing] = useState(false);
     const [newText, setNewText] = useState(task.text);
     const [newStorage, setNewStorage] = useState(task.storage);
+    const [newValue, setNewValue] = useState(task.storage);
 
 
     const handleEdit = () => {
