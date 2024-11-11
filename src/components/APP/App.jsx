@@ -21,9 +21,9 @@ function App() {
 
   return (
     <div className={styles.aplicativo}>
-      <ListaEstoque tasks={tasks}
-      />
         <FormularioProduto addProduct={addProduct}></FormularioProduto>
+        <ListaEstoque tasks={tasks}
+      />
     </div>
   );
 }

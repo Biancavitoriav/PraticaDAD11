@@ -4,6 +4,8 @@ import styles from "./ItemEstoque.module.css";
 function ItemEstoque({ task }) {
     const [isEditing, setIsEditing] = useState(false);
     const [newText, setNewText] = useState(task.text);
+    const [newStorage, setNewStorage] = useState(task.storage);
+
 
     const handleEdit = () => {
         setIsEditing(true);
@@ -15,7 +17,7 @@ function ItemEstoque({ task }) {
     };
 
     return (
-        <li className={styles.list} key={task.id}>
+        <li className={styles.produtoItem} key={task.id}>
             {}
             {isEditing ? (
                 <>
@@ -37,15 +39,15 @@ function ItemEstoque({ task }) {
                     {}
                     <button
                         onClick={handleEdit}
-                        className={styles.bt}
+                        className={styles.botaoComprar}
                     >
-                        Editar
+                        +
                     </button>
                     <button
                         onClick={() => removeTask(task.id)}
-                        className={styles.btRemover}
+                        className={styles.botaoVender}
                     >
-                        Remover
+                        -
                     </button>
                 </>
             )}
