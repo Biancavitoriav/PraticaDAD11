@@ -28,6 +28,12 @@ function ItemEstoque({ task }) {
                         onChange={(e) => setNewText(e.target.value)}
                         className={styles.input}
                     />
+                    <input
+                        type="text"
+                        value={newText}
+                        onChange={(e) => setNewText(e.target.value)}
+                        className={styles.input}
+                    />
                     <button
                         onClick={handleSave}
                         className={styles.saveButton}
@@ -39,7 +45,7 @@ function ItemEstoque({ task }) {
                 <>
                     {}
                     <button
-                        onClick={handleEdit}
+                        // onClick={handleEdit}
                         className={styles.botaoComprar}
                     >
                         +
